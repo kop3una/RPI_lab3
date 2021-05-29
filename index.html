@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+</head>
+
+<body>
+     <div class="controlBlock">
+        <div class="buttons">
+            <button class="button updateButton">
+            </button>
+            <div class="languageBlock">
+                <button class="button languageButton">
+                    <span id="curLanguage">en</span>
+                </button>
+                <div class="languageMenu">
+                    <button class="langItem button" id="en">en</button>
+                    <button class="langItem button inactive" id="ru">ru</button>
+                </div>
+            </div>
+            <button class="button fButton inactive">°F</button>
+            <button class="button cButton">°C</button>
+        </div>
+        <div class="searchBlock">
+            <input class="searchInput" type="search" name="search-city" required=""
+                placeholder="Search city or ZIP" value="">
+            <button class="button searchButton">Search</button>
+            <button class="microButton off"></button>
+        </div>
+    </div>
+        <div class="main">
+        <div class="weatherBlock">
+            <p class="weatherLocation"></p>
+            <p class="date">
+                <span class="time"></span>
+            </p>
+            <p class="curTemperature" id="curTemperature"></p>
+            <img class="weatherIcon" alt="img" src="">
+            <div class="detailedWeather">
+                <p id="weatherDescription"></p>
+                <p>
+                    <span id="apparentTemperature">Feels like:</span>
+                    <span id="degreesValueApparent"></span>
+                </p>
+                <p>
+                    <span id="windSpeed">Wind Speed:</span>
+                    <span id="valueSpeed"></span>
+                </p>
+                <p>
+                    <span id="airHumidity">Humidity:</span>
+                    <span id="valueHumidity"></span>
+                </p>
+            </div>
+            <div class="forecast" id="tomorrow">
+                <p class="forecastDay"></p>
+                <p class="forecastTemperature"></p>
+                <img class="forecastIcon" alt="img" src="">
+            </div>
+            <div class="forecast" id="afterTomorrow">
+                <p class="forecastDay"></p>
+                <p class="forecastTemperature"></p>
+                <img class="forecastIcon" alt="img" src="">
+            </div>
+            <div class="forecast" id="inTwoDay">
+                <p class="forecastDay"></p>
+                <p class="forecastTemperature"></p>
+                <img class="forecastIcon" alt="img" src="">
+            </div>
+        </div>
+        <div class="mapBlock">
+            <div id="map">
+               
+            </div>
+            <div class="coordinates">
+                <p id="latitude"></p>
+                <p id="longitude"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/setBg.js" async></script>
+    <script src="scripts/languageSearch.js" async></script>
+    <script src="scripts/tempButton.js" async></script>
+    <script src="scripts/micro.js" async></script>
+    <script src="scripts/time.js" async></script>
+    <script src="scripts/weather.js" async></script>
+    <script src="scripts/map.js" async></script>
+    <script src="scripts/search.js" async></script>
+</body>
+
+</html>

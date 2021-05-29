@@ -1,0 +1,354 @@
+*, :after, :before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.15;
+}
+
+img {
+    border-style: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    animation: smoothAppearance .5s ease-in-out;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    font-family: Montserrat, tahoma, sans-serif;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+@-webkit-keyframes smoothAppearance {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes smoothAppearance {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 4.4rem;
+}
+
+.controlBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.buttons {
+    display: flex;
+    margin-left: 6vw;
+    margin-right: 2rem;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.button {
+    position: relative;
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    background: rgba(180, 184, 187, .7);
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.button:hover {
+    background-color: #b4b8bb;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.updateButton {
+    background-image: url(img/Refresh%20BG.png);
+    background-size: 4.4rem;
+}
+
+.languageBlock {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.languageButton {
+    width: 7.1rem;
+}
+
+.languageOpen {
+    border-radius: .5rem .5rem 0 0;
+}
+
+.languageMenu {
+    position: absolute;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .6s cubic-bezier(.25, .46, .45, .94), border-radius .2s;
+}
+
+.openMenu {
+    max-height: 20rem;
+    height: auto;
+}
+
+.langItem {
+    width: 7.1rem;
+    border-radius: 0.5rem;
+    cursor: auto;
+}
+
+.fButton {
+    margin-left: 1rem;
+    border-radius: .5rem 0 0 .5rem;
+    cursor: auto;
+}
+
+.cButton {
+    border-radius: 0 .5rem .5rem 0;
+    cursor: auto;
+}
+
+.inactive {
+    background: rgba(76, 82, 85, .7);
+    color: hsla(0, 0%, 100%, .7);
+    cursor: pointer;
+}
+
+.searchBlock {
+    position: relative;
+    display: flex;
+    margin-right: 6vw;
+    margin-left: 2rem;
+}
+
+.searchInput {
+    width: 27.4rem;
+    height: 4.4rem; 
+    border: .1rem solid rgba(180, 184, 187, .7);
+    border-radius: .5rem 0 0 .5rem;
+    padding: 1.3rem 1.5rem;
+    background: rgba(76, 82, 85, .7);
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.searchInput::placeholder{
+    color: white;
+}
+
+.searchButton {
+    width: 10rem;
+    margin-left: 0;
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.microButton {
+    position: absolute;
+    z-index: 1;
+    top: .2rem;
+    right: 10.5rem;
+    width: 3rem;
+    height: 4rem;
+    background: url(img/microphone.svg) 50% no-repeat;
+    background-size: 50%;
+}
+
+.off.microButton:after {
+    position: absolute;
+    content: "/";
+    color: #CD5C5C;
+    font-weight: bold;
+    font-size: 2.8rem;
+    left: 1.1rem;
+    top: 0.4rem;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 6vw;
+}
+
+.weatherBlock{
+    display: grid;
+    grid-template-columns: 22rem 22rem 25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.weatherLocation{
+    grid-column: 1/4;
+    font-size: 4.4rem;
+}
+
+.date {
+    grid-column: 1/4;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.curTemperature {
+    position: relative;
+    grid-column: 1/3;
+    grid-row: 3/5;
+    text-align: center;
+    font-size: 30.6rem;
+}
+
+.detailedWeather, .weatherIcon {
+    transform: translateY(-20%);
+}
+
+.detailedWeather>p:not(#weatherDescription) {
+    margin-top: 1.3rem;
+}
+
+.weatherIcon{
+    width: 17rem;
+    height: 17rem;
+}
+
+.forecast {
+    display: grid;
+    margin-right: 5rem;
+}
+
+.forecastDay{
+    grid-column: 1/3;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.forecastTemperature {
+    font-size: 8rem;
+}
+
+.forecastIcon {
+    width: 6.7rem;
+    height: 6.7rem;
+}
+
+
+#map {
+    width: 37.5rem;
+    height: 37.5rem;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+
+.coordinates {
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    text-align: right;
+}
+
+
+
+@media (max-width: 75.8em) {
+    html {
+        font-size: 56.25%;
+    }
+    .main{
+        justify-content: center;
+    }
+    .mapBlock {
+        margin-top: 10rem;
+    }
+    .coordinates {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+    .date, .weatherLocation {
+        text-align: center;
+    }
+    .detailedWeather, .weatherIcon{
+        transform: translateY(-10%);
+    }
+    .forecast {
+        margin: 0 2.5rem;
+    }
+}
+
+@media (max-width: 37.5em) {
+    .weatherBlock {
+        grid-template-columns: repeat(3, 10rem);
+        justify-content: center;
+    }
+    .curTemperature {
+        grid-column: 1/4;
+        font-size: 18rem;
+    }
+    .weatherIcon{
+        grid-column: 1/4;
+        margin: 0 auto;
+    }
+    .weather-data-cluster__temperature-icon {
+        width: 20rem;
+        height: 20rem;
+        left: -9rem;
+        top: 2rem;
+    }
+    .buttons {
+        order: 1;
+        margin: 4rem 5rem 0;
+    }
+    .controlBlock {
+        justify-content: center;
+    }
+    .forecast {
+        margin-top: 4rem;
+    }
+    .forecast, .detailedWeather {
+        grid-column: 1/4;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
